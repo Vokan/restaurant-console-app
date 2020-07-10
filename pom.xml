@@ -13,6 +13,25 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     </properties>
-
+	
+	<!-- TODO Bloc à ajouter -->
+     <dependencyManagement>
+          <dependencies>
+			<dependency> 
+				<groupId>org.springframework.boot</groupId> 
+				<artifactId>spring-boot-dependencies</artifactId> 
+				<version>2.2.5.RELEASE</version>
+					<type>pom</type>
+					<scope>import</scope>
+              </dependency>
+          </dependencies>
+      </dependencyManagement>
+      
+      <!-- TODO - Notez bien que cette section est en dehors de la rubrique <dependencyManagement> -->
+      <dependencies>
+          <dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId> </dependency>
+      </dependencies>
 
 </project>
