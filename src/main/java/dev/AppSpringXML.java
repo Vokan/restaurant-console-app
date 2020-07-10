@@ -20,7 +20,7 @@ public class AppSpringXML {
 	 */
 	public static void main(String[] args) {
 		 // Création du contexte Spring
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext ("application-config-memoire.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext ("application-config-fichier.xml");
 		
 		// récupération du bean Menu
 		
