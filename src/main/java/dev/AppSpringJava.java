@@ -15,11 +15,6 @@ import dev.ihm.Menu;
 			AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 			
 			
-			context.getEnvironment().setActiveProfiles("platServ2", "jpa");
-			
-			context.register(AppConfig.class);
-			context.refresh();
-			
 			// récupération du bean Menu
 			Menu menu = context.getBean(Menu.class); menu.afficher();
 			

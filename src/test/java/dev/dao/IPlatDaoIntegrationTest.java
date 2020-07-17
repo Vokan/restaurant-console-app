@@ -38,7 +38,7 @@ public class IPlatDaoIntegrationTest {
 	@Test
 	void ajouterPlat() {
 		dao.ajouterPlat("sushi", 800);
-		String sql = "SELECT prix FROM plat WHERE nom = 'sushi'";
+		String sql = "SELECT prixEnCentimesEuros FROM PLAT WHERE NOM = 'sushi'";
 		Integer prix = jdbc.queryForObject(sql, Integer.class);
 		assertThat(prix).isEqualTo(800);
 	}

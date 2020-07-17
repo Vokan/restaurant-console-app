@@ -25,6 +25,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 		public class JpaConfig {
 		
 		// Configuration de l'EntityManagerFactory
+		
 		@Bean
 		public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource) {
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter(); 
@@ -46,7 +47,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 		// Configuration du gestionnaire de transaction pour JPA
 
 		@Bean
-
 		public PlatformTransactionManager transactionManager(EntityManagerFactory emf) { 
 			JpaTransactionManager transactionManager = new JpaTransactionManager(); 
 			transactionManager.setEntityManagerFactory(emf);

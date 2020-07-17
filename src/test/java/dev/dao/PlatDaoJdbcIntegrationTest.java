@@ -21,7 +21,7 @@ import dev.entite.Plat;
  */
 
 @SpringJUnitConfig(classes = {PlatDaoJdbc.class, JdbcTestConfig.class})
-@ActiveProfiles("jdbc")
+@ActiveProfiles("platDoaJdbc")
 public class PlatDaoJdbcIntegrationTest extends IPlatDaoIntegrationTest {
 			
 	

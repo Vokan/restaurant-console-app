@@ -1,6 +1,6 @@
-create table plat 
+create table PLAT 
 	(
-		id int(11) not null primary key auto_increment, 
-		nom varchar(100) not null unique,
-		prix int(7) not null
+		ID INT(11) not null primary key auto_increment, 
+		NOM VARCHAR(100) not null unique,
+		prixEnCentimesEuros INT(7) not null
 );
