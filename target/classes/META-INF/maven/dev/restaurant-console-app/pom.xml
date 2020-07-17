@@ -41,6 +41,29 @@
       <!-- TODO - Notez bien que cette section est en dehors de la rubrique <dependencyManagement> -->
       <dependencies>
       
+      <dependency> 
+      		<groupId>org.springframework</groupId> 
+      		<artifactId>spring-orm</artifactId>
+  		</dependency>
+  		
+  		<dependency>
+			<groupId>javax.persistence</groupId> 
+			<artifactId>javax.persistence-api</artifactId>
+ 	 	</dependency>
+ 	 	
+ 	 	<dependency> 
+ 	 		<groupId>org.hibernate</groupId> 
+ 	 		<artifactId>hibernate-core</artifactId> 
+ 	 		<scope>runtime</scope>
+  		</dependency>
+ 	 	
+  		
+      		<dependency> 
+      			<groupId>com.h2database</groupId> 
+      			<artifactId>h2</artifactId> 
+      			<scope>test</scope>
+  			</dependency>
+      
           <dependency> 
           	<groupId>org.springframework</groupId> 
           	<artifactId>spring-jdbc</artifactId>

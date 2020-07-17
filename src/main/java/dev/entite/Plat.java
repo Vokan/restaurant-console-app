@@ -2,6 +2,7 @@ package dev.entite;
 
 import java.util.Objects;
 
+
 public class Plat {
 
     private String nom;

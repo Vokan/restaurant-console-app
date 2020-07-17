@@ -23,10 +23,10 @@ import dev.entite.Plat;
 @Profile("platDoaJdbc")
 public class PlatDaoJdbc implements IPlatDao{
 	
-	private JdbcTemplate jdbcTemplate;
+	private JdbcTemplate jdbc;
 	
 	public PlatDaoJdbc(DataSource datasource) { 
-		this.jdbcTemplate = new JdbcTemplate(datasource);
+		this.jdbc = new JdbcTemplate(datasource);
 	}
 
 	@Override
@@ -42,14 +42,14 @@ public class PlatDaoJdbc implements IPlatDao{
 			};
 	
 			String sql = "SELECT NOM, prixEnCentimesEuros FROM PLAT";
-			List<Plat> plats = this.jdbcTemplate.query(sql, mapper);
+			List<Plat> plats = this.jdbc.query(sql, mapper);
 			return plats;
 			}
 	
 			@Override
 			public void ajouterPlat(String nomPlat, Integer prixPlat) {
-				String sql = "INSERT INTO PLAT (NOM, prixEnCentimesEuros) VALUE(,)";
-				jdbcTemplate.update(sql, nomPlat, prixPlat);
+				String sql = "INSERT INTO PLAT (NOM, prixEnCentimesEuros) VALUE(?,?)";
+				jdbc.update(sql, nomPlat, prixPlat);
 		
 	}
 
