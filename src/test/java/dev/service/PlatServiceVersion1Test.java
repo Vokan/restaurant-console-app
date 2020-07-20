@@ -2,13 +2,14 @@ package dev.service;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import dev.dao.IPlatDao;
-import dev.dao.PlatDaoMemoire;
+
 import dev.exception.PlatException;
 
 public class PlatServiceVersion1Test {
@@ -42,6 +43,6 @@ public class PlatServiceVersion1Test {
 
 			platServiceVersion1.ajouterPlat("chaussette", 4500);
 
-			verify(dao).ajouterPlat("chaussette", 4500);
+			verify(platDao).ajouterPlat("chaussette", 4500);
 }
 }

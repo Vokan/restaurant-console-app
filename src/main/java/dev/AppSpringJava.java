@@ -16,7 +16,9 @@ import dev.ihm.Menu;
 			
 			
 			// récupération du bean Menu
-			Menu menu = context.getBean(Menu.class); menu.afficher();
+			Menu menu = context.getBean(Menu.class); 
+			
+			menu.afficher();
 			
 			// fermeture du Scanner
 			context.getBean(Scanner.class).close(); // fermeture du contexte Spring
